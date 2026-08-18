@@ -1,9 +1,11 @@
-# Visualisasi Algoritma Shortest Path & Widest Path
+<h1 align="center">Visualisasi Algoritma Shortest Path & Widest Path</h1>
 
-![Python](https://img.shields.io/badge/python-3.9%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![matplotlib](https://img.shields.io/badge/matplotlib-3.8%2B-orange)
-![networkx](https://img.shields.io/badge/networkx-3.2%2B-orange)
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.9%2B-blue" alt="Python">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+  <img src="https://img.shields.io/badge/matplotlib-3.8%2B-orange" alt="matplotlib">
+  <img src="https://img.shields.io/badge/networkx-3.2%2B-orange" alt="networkx">
+</p>
 
 Repository ini berisi script Python (`generate_diagrams.py`) yang menghasilkan **8 diagram visualisasi** untuk materi presentasi mata kuliah **Jaringan Telekomunikasi**, topik *"Shortest Path and Widest Path Algorithms"*. Setiap diagram dibuat dari implementasi algoritma yang sebenarnya (bukan ilustrasi manual), sehingga seluruh angka, urutan proses, dan jalur yang ditampilkan **konsisten dengan hasil komputasi** — cocok dijadikan bahan slide, laporan, maupun modul belajar.
 
@@ -34,14 +36,26 @@ Repository ini berisi script Python (`generate_diagrams.py`) yang menghasilkan *
 
 ## Preview
 
-| | |
-|---|---|
-| ![Bellman-Ford](01_bellman_ford.png) <br> **1. Bellman-Ford Algorithm** | ![Dijkstra](02_dijkstra.png) <br> **2. Dijkstra's Algorithm** |
-| ![Floyd-Warshall](03_floyd_warshall.png) <br> **3. Floyd-Warshall Algorithm** | ![BFS](04_bfs.png) <br> **4. Breadth-First Search (BFS)** |
-| ![Johnson](05_johnson.png) <br> **5. Johnson's Algorithm** | ![Modified Dijkstra](06_modified_dijkstra.png) <br> **6. Modified Dijkstra's Algorithm** |
-| ![Maximum Capacity Path](07_maximum_capacity_path.png) <br> **7. Maximum Capacity Path** | ![Suurballe](08_suurballe.png) <br> **8. Suurballe's Algorithm** |
+<table align="center">
+  <tr>
+    <td align="center"><img src="01_bellman_ford.png" width="420"><br><b>1. Bellman-Ford Algorithm</b></td>
+    <td align="center"><img src="02_dijkstra.png" width="420"><br><b>2. Dijkstra's Algorithm</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="03_floyd_warshall.png" width="420"><br><b>3. Floyd-Warshall Algorithm</b></td>
+    <td align="center"><img src="04_bfs.png" width="420"><br><b>4. Breadth-First Search (BFS)</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="05_johnson.png" width="420"><br><b>5. Johnson's Algorithm</b></td>
+    <td align="center"><img src="06_modified_dijkstra.png" width="420"><br><b>6. Modified Dijkstra's Algorithm</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="07_maximum_capacity_path.png" width="420"><br><b>7. Maximum Capacity Path</b></td>
+    <td align="center"><img src="08_suurballe.png" width="420"><br><b>8. Suurballe's Algorithm</b></td>
+  </tr>
+</table>
 
-> Semua gambar disimpan dalam resolusi **300 dpi**, background putih, siap ditempel langsung ke slide PowerPoint.
+<p align="center"><em>Semua gambar disimpan dalam resolusi <strong>300 dpi</strong>, background putih, siap ditempel langsung ke slide PowerPoint.</em></p>
 
 ## Perbedaan Shortest Path vs Widest Path
 
