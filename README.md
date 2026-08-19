@@ -7,11 +7,12 @@
   <img src="https://img.shields.io/badge/networkx-3.2%2B-orange" alt="networkx">
 </p>
 
-Repository ini berisi script Python (`generate_diagrams.py`) yang menghasilkan **8 diagram visualisasi** untuk materi presentasi mata kuliah **Jaringan Telekomunikasi**, topik *"Shortest Path and Widest Path Algorithms"*. Setiap diagram dibuat dari implementasi algoritma yang sebenarnya (bukan ilustrasi manual), sehingga seluruh angka, urutan proses, dan jalur yang ditampilkan **konsisten dengan hasil komputasi** — cocok dijadikan bahan slide, laporan, maupun modul belajar.
+Repository ini berisi script Python (`generate_diagrams.py`) yang menghasilkan **8 diagram visualisasi** untuk materi presentasi mata kuliah **Jaringan Telekomunikasi**, topik *"Shortest Path and Widest Path Algorithms"*, serta script tambahan (`combine_diagrams.py`) yang menggabungkan ke-8 diagram tersebut menjadi **1 gambar perbandingan**. Setiap diagram dibuat dari implementasi algoritma yang sebenarnya (bukan ilustrasi manual), sehingga seluruh angka, urutan proses, dan jalur yang ditampilkan **konsisten dengan hasil komputasi** — cocok dijadikan bahan slide, laporan, maupun modul belajar.
 
 ## Daftar Isi
 
 - [Preview](#preview)
+- [🔍 Perbandingan Semua Algoritma dalam Satu Gambar](#-perbandingan-semua-algoritma-dalam-satu-gambar)
 - [Perbedaan Shortest Path vs Widest Path](#perbedaan-shortest-path-vs-widest-path)
 - [Cara Menggunakan](#cara-menggunakan)
   - [Requirement](#requirement)
@@ -56,6 +57,25 @@ Repository ini berisi script Python (`generate_diagrams.py`) yang menghasilkan *
 </table>
 
 <p align="center"><em>Semua gambar disimpan dalam resolusi <strong>300 dpi</strong>, background putih, siap ditempel langsung ke slide PowerPoint.</em></p>
+
+## 🔍 Perbandingan Semua Algoritma dalam Satu Gambar
+
+Selain 8 diagram individual di atas, repository ini juga menyediakan **satu gambar gabungan** yang menyusun seluruh diagram ke dalam satu grid, dikelompokkan berdasarkan grup Shortest Path dan Widest Path — dihasilkan oleh script [`combine_diagrams.py`](combine_diagrams.py).
+
+<p align="center">
+  <img src="09_all_algorithms_comparison.png" width="720">
+</p>
+
+<p align="center"><em>Gambar 9. Perbandingan seluruh 8 algoritma dalam satu file — <code>09_all_algorithms_comparison.png</code> (300 dpi).</em></p>
+
+Gambar gabungan ini berguna karena memudahkan untuk:
+
+- **Membandingkan struktur graf** antar algoritma secara langsung, tanpa harus membuka 8 file terpisah satu per satu.
+- **Membandingkan jalur (path) yang dipilih** tiap algoritma pada graf contohnya masing-masing dalam satu pandangan mata.
+- **Membandingkan kompleksitas visual** tiap algoritma (mis. jumlah panel/step Bellman-Ford dan Johnson vs kesederhanaan BFS), sehingga perbedaan tingkat kerumitan antar algoritma langsung terlihat.
+- Dipakai sebagai **satu slide ringkasan** di akhir presentasi, atau **satu lampiran** pembanding di laporan, tanpa perlu menyusun ulang 8 gambar secara manual.
+
+Script ini hanya menyusun ulang (compose) 8 file PNG yang sudah ada — bukan menghitung ulang graf/algoritma — sehingga hasilnya selalu konsisten dengan output `generate_diagrams.py`.
 
 ## Perbedaan Shortest Path vs Widest Path
 
@@ -129,6 +149,21 @@ Generating diagrams for 'Shortest Path and Widest Path Algorithms'...
 Selesai! Semua 8 diagram berhasil dibuat di: <path-project>
 ```
 
+Setelah itu, jalankan `combine_diagrams.py` untuk menggabungkan ke-8 diagram tersebut menjadi satu gambar perbandingan:
+
+```bash
+python combine_diagrams.py
+```
+
+```text
+Menggabungkan 8 diagram menjadi satu gambar...
+  -> saved 09_all_algorithms_comparison.png
+
+Selesai! Gambar gabungan tersimpan di: <path-project>\09_all_algorithms_comparison.png
+```
+
+> Jika salah satu dari 8 file PNG belum ada, `combine_diagrams.py` akan berhenti dengan pesan error yang menyebutkan file mana yang hilang — jalankan `generate_diagrams.py` terlebih dahulu.
+
 ### Output
 
 | File | Algoritma |
@@ -141,6 +176,7 @@ Selesai! Semua 8 diagram berhasil dibuat di: <path-project>
 | `06_modified_dijkstra.png` | Modified Dijkstra's Algorithm (Widest Path) |
 | `07_maximum_capacity_path.png` | Maximum Capacity Path |
 | `08_suurballe.png` | Suurballe's Algorithm |
+| `09_all_algorithms_comparison.png` | Gabungan seluruh 8 algoritma dalam satu gambar (hasil `combine_diagrams.py`) |
 
 Semua file disimpan **langsung di root folder project** (folder yang sama dengan `generate_diagrams.py`), dengan resolusi 300 dpi dan background putih (`#fcfcfb`).
 
@@ -310,6 +346,7 @@ Catatan saat mengganti graf:
 ```text
 .
 ├── generate_diagrams.py           # Script utama — jalankan ini untuk generate semua diagram
+├── combine_diagrams.py             # Menggabungkan 8 diagram menjadi 1 gambar perbandingan
 ├── requirements.txt                # Daftar dependency Python
 ├── .gitignore                      # File/folder yang diabaikan git
 ├── README.md                       # Dokumen ini
@@ -320,7 +357,8 @@ Catatan saat mengganti graf:
 ├── 05_johnson.png                  # Output: Johnson's Algorithm
 ├── 06_modified_dijkstra.png        # Output: Modified Dijkstra's Algorithm
 ├── 07_maximum_capacity_path.png    # Output: Maximum Capacity Path
-└── 08_suurballe.png                # Output: Suurballe's Algorithm
+├── 08_suurballe.png                # Output: Suurballe's Algorithm
+└── 09_all_algorithms_comparison.png # Output: gabungan seluruh 8 algoritma (combine_diagrams.py)
 ```
 
 ## Lisensi
