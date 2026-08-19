@@ -330,7 +330,7 @@ Project ini dilisensikan di bawah **MIT License**.
 ```text
 MIT License
 
-Copyright (c) 2026 <nama-anda>
+Copyright (c) 2026 nagatapct
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
